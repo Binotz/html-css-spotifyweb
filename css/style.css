@@ -55,24 +55,38 @@ nav li{
     padding: 0 1rem;
     font-size: 13px;
 }
+.recently-played{
+    margin-bottom: 2rem;
+}
 .recently-played h2{
     margin-bottom: 1rem;
 }
 .recently-played ul{
     flex-wrap: wrap;
-    align-items: flex-start;
 }
 .recently-played li{
     width: calc(100% / 6);
 }
-.played-layout{
+.album-layout{
     padding-right: 1rem;
     padding-bottom: 1rem;
 }
-.played-content{
+.album-content{
     text-align: center;
 }
-
+/* Creato per */
+.created-for-text{
+    margin-bottom: 1rem;
+}
+.created-for-text h1{
+    margin-bottom: 1rem;
+}
+.created-for-text h5{
+    line-height: 2rem;
+}
+.created-for li{
+    width: calc(100% / 6);
+}
 /* Footer */
 footer{
     height: 80px;
@@ -87,16 +101,25 @@ footer{
 /* MediaQuery */
 /* Medium */
 @media screen and (max-width: 1100px) {
+    /* Recently played */
     .recently-played li{
         width: calc(100% / 4);
     }
-    
+    /* Created for */
+    .created-for li{
+        width: calc(100% / 4);
+    }    
 }
 /* Small */
 @media screen and (max-width: 700px) {
+    /* Recently played */
     .recently-played li{
         width: calc(100% / 2);
     }
+    /* Created for */
+    .created-for li{
+        width: calc(100% / 2);
+    } 
 }
 /* ExtraSmall */
 @media screen and (max-width: 600px){
