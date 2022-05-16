@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Local CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Spotify Web</title>
@@ -20,13 +21,20 @@
             <div class="sidebar-layout">
                 <div class="sidebar-content">
                     <!-- logo & first elements -->
-                    <img src="./img/logo.svg" alt="logo">
+                    <img src="./img/logo.svg" alt="logo" class="logo">
                     <ul>
-                        <li>                            
-                            Home
+                        <li id="current-sidebar">  
+                            <img src="./img/home.svg" alt="home">                          
+                            <a href="#">Home</a>
                         </li>
-                        <li>Cerca</li>
-                        <li>La tua libreria</li>
+                        <li>
+                            <img src="./img/search.svg" alt="search">
+                            <a href="#">Search</a>
+                        </li>
+                        <li>
+                            <img src="./img/libreria.svg" alt="Library">
+                            <a href="#">La tua libreria</a>
+                        </li>
                     </ul>
                     <!-- Playlist  -->
                     <div class="playlist">
@@ -52,7 +60,7 @@
                 <div class="music-content">
                     <nav>
                         <ul class="flex">
-                            <li>IN EVIDENZA</li>
+                            <li id="current">IN EVIDENZA</li>
                             <li>PODCAST</li>
                             <li>CLASSIFICHE</li>
                             <li>GENERI E MOOD</li>
@@ -68,8 +76,41 @@
                                 <!-- card -->
                                 <div class="album-layout">
                                     <div class="album-content">
-                                        <img src="./img/metal_lifting.jpg" alt="metal">
+                                        <div class="album-pic">
+                                            <img src="./img/metal_lifting.jpg" alt="metal">
+                                            <div class="overlay"></div>
+                                            <i class="fa-solid fa-circle-play"></i>
+                                        </div>
                                         <h4>Heavy Metal</h4>
+                                        <h5>Subtitle</h5>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- card -->
+                                <div class="album-layout">
+                                    <div class="album-content">
+                                        <div class="album-pic">
+                                            <img src="./img/stranger.jpeg" alt="Stranger">
+                                            <div class="overlay"></div>
+                                            <i class="fa-solid fa-circle-play"></i>
+                                        </div>
+                                        <h4>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h4>
+                                        <h5>Dixon & Micheal Stein</h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- card -->
+                                <div class="album-layout">
+                                    <div class="album-content">
+                                        <div class="album-pic">
+                                            <img src="./img/aquietplace.jpeg" alt="a quiet place">
+                                            <div class="overlay"></div>
+                                            <i class="fa-solid fa-circle-play"></i>
+                                        </div>
+                                        <h4>A quiet place</h4>
                                         <h5>Subtitle</h5>
                                     </div>
                                 </div>
@@ -78,8 +119,12 @@
                                 <!-- card -->
                                 <div class="album-layout">
                                     <div class="album-content">
-                                        <img src="./img/metal_lifting.jpg" alt="metal">
-                                        <h4>Heavy Metal</h4>
+                                        <div class="album-pic">
+                                            <img src="./img/split.jpeg" alt="split">
+                                            <div class="overlay"></div>
+                                            <i class="fa-solid fa-circle-play"></i>
+                                        </div>
+                                        <h4>Split</h4>
                                         <h5>Subtitle</h5>
                                     </div>
                                 </div>
@@ -88,8 +133,12 @@
                                 <!-- card -->
                                 <div class="album-layout">
                                     <div class="album-content">
-                                        <img src="./img/metal_lifting.jpg" alt="metal">
-                                        <h4>Heavy Metal</h4>
+                                        <div class="album-pic">
+                                            <img src="./img/cure.jpeg" alt="cure">
+                                            <div class="overlay"></div>
+                                            <i class="fa-solid fa-circle-play"></i>
+                                        </div>
+                                        <h4>A cure for wellness</h4>
                                         <h5>Subtitle</h5>
                                     </div>
                                 </div>
@@ -98,28 +147,12 @@
                                 <!-- card -->
                                 <div class="album-layout">
                                     <div class="album-content">
-                                        <img src="./img/metal_lifting.jpg" alt="metal">
-                                        <h4>Heavy Metal</h4>
-                                        <h5>Subtitle</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <!-- card -->
-                                <div class="album-layout">
-                                    <div class="album-content">
-                                        <img src="./img/metal_lifting.jpg" alt="metal">
-                                        <h4>Heavy Metal</h4>
-                                        <h5>Subtitle</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <!-- card -->
-                                <div class="album-layout">
-                                    <div class="album-content">
-                                        <img src="./img/metal_lifting.jpg" alt="metal">
-                                        <h4>Heavy Metal</h4>
+                                        <div class="album-pic">
+                                            <img src="./img/sinister.jpeg" alt="sinister">
+                                            <div class="overlay"></div>
+                                            <i class="fa-solid fa-circle-play"></i>
+                                        </div>
+                                        <h4>Sinister</h4>
                                         <h5>Subtitle</h5>
                                     </div>
                                 </div>
@@ -187,6 +220,9 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="upgrade">
+                <a href="#" class="btn">EFFETTUA L'UPGRADE</a>
             </div>
         </main>
         <!-- Footer (Player) -->

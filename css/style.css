@@ -1,3 +1,7 @@
+/* Variables */
+:root{
+    --grey-text: #686b71;
+}
 /* Reset */
 *{
     padding: 0;
@@ -14,8 +18,22 @@ li{
 img{
     width: 100%;
 }
+a{
+    text-decoration: none;
+}
 .flex{
     display: flex;
+}
+.btn{
+    padding: 1rem 3rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 1s;
+}
+.btn:hover{
+    transform: scale(1.5);
 }
 /* Main */
 main{
@@ -23,26 +41,63 @@ main{
     background-color: lightgray;
     height: calc(100vh - 80px);
 }
+/* Upgrade */
+.upgrade{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    background-color: rgba(0,0,0,0.4);
+    width: calc(100% - 200px);
+    text-align: right;
+}
 /* Sidebar */
 .sidebar-layout{
     width: 200px;
     overflow-y: hidden;
-    /* TEST */
-    background-color: lightgreen;
 }
 .sidebar-content{
-    padding: 0 1rem;
-    /* TEST */
-    border: 1px solid black;
+    width: 100%;
+    background-color: black;
+    color: var(--grey-text);    
+}
+.sidebar-content a{
+    color: var(--grey-text);
+}
+.sidebar-content li{
+    padding: 0.7rem calc(1rem + 4px);
+}
+.sidebar-content li img{
+    width: 30px;
+}
+.sidebar-content li *{
+    vertical-align: middle;
+}
+.sidebar-layout .logo{
+    padding: 1rem 1rem;
 }
 
+/* TEST, diventerà current-sidebar */
+#current-sidebar{
+    border-left: 4px solid #a3f12c;
+    padding-left: 1rem ;
+    color: white;
+}
 /* Music */
 .music-layout{
     width: calc(100% - 200px);
     padding: 1rem;
+    padding-top: 6rem;
     overflow-y: auto;
-    /* TEST */
-    background-color: aquamarine;
+    background-color: #141922;
+}
+.music-content h2,
+.music-content h4,
+.music-content i{
+    color: white;
+}
+.music-content h5{
+    color: var(--grey-text);
 }
 nav{
     margin-bottom: 2rem;
@@ -54,6 +109,11 @@ nav ul{
 nav li{
     padding: 0 1rem;
     font-size: 13px;
+    color: var(--grey-text);
+    font-weight: bold;
+}
+nav li:hover{
+    color: white;
 }
 .recently-played{
     margin-bottom: 2rem;
@@ -73,6 +133,35 @@ nav li{
 }
 .album-content{
     text-align: center;
+}
+.album-content>*{
+    margin-bottom: 1rem;
+}
+/* Overlay effect + icon */
+.album-pic{
+    position: relative;
+}
+.music-content i{
+    font-size: 3rem;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.overlay{    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.album-content:hover i,
+.album-content:hover .overlay
+{
+    display: block;
 }
 /* Creato per */
 .created-for-text{
