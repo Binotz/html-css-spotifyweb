@@ -4,3 +4,99 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Common */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+li{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+}
+.flex{
+    display: flex;
+}
+/* Main */
+main{
+    display: flex;
+    background-color: lightgray;
+    height: calc(100vh - 80px);
+}
+/* Sidebar */
+.sidebar-layout{
+    width: 200px;
+    overflow-y: hidden;
+    /* TEST */
+    background-color: lightgreen;
+}
+.sidebar-content{
+    padding: 0 1rem;
+    /* TEST */
+    border: 1px solid black;
+}
+
+/* Music */
+.music-layout{
+    width: calc(100% - 200px);
+    padding: 1rem;
+    overflow-y: auto;
+    /* TEST */
+    background-color: aquamarine;
+}
+nav{
+    margin-bottom: 2rem;
+}
+nav ul{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav li{
+    padding: 0 1rem;
+    font-size: 13px;
+}
+.recently-played h2{
+    margin-bottom: 1rem;
+}
+.recently-played ul{
+    justify-content: space-between;
+}
+.recently-played li{
+    width: calc(100% / 6);
+}
+.played-layout{
+    padding-right: 1rem;
+}
+.played-content{
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    height: 80px;
+    /* TEST */
+    background-color: lightcoral;
+}
+
+
+
+
+
+/* MediaQuery */
+/* Medium */
+@media screen and (max-width: 1100px) {
+    
+}
+/* Small */
+@media screen and (max-width: 700px) {
+    
+}
+/* ExtraSmall */
+@media screen and (max-width: 600px){
+    .sidebar-layout{
+        width: 50px;
+    }
+    .main-layout{
+        width: calc(100% - 50px);
+    }
+}
