@@ -78,9 +78,12 @@ main{
 }
 
 /* TEST, diventerà current-sidebar */
-#current-sidebar{
+.sidebar-content #current-sidebar{
     border-left: 4px solid #a3f12c;
     padding-left: 1rem ;
+    color: white;
+}
+#current-sidebar a{
     color: white;
 }
 /* Music */
