@@ -87,6 +87,22 @@ nav li{
 .created-for li{
     width: calc(100% / 6);
 }
+/* Popular artists */
+.popular-artists-text{
+    margin-bottom: 1rem;
+}
+.popular-artists-text h1{
+    margin-bottom: 1rem;
+}
+.popular-artists-text h5{
+    line-height: 2rem;
+}
+.popular-artists li{
+    width: calc(100% / 6);
+}
+.popular-artists img{
+    border-radius: 50%;
+}
 /* Footer */
 footer{
     height: 80px;
@@ -109,6 +125,10 @@ footer{
     .created-for li{
         width: calc(100% / 4);
     }    
+    /* Popular artists */
+    .popular-artists li{
+        width: calc(100% / 4);
+    }
 }
 /* Small */
 @media screen and (max-width: 700px) {
@@ -118,6 +138,10 @@ footer{
     }
     /* Created for */
     .created-for li{
+        width: calc(100% / 2);
+    } 
+    /* Popular artists */
+    .popular-artists li{
         width: calc(100% / 2);
     } 
 }
