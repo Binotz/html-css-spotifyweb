@@ -283,11 +283,12 @@ footer{
 /* Song details */
 .song-details,
 .audio-control{
-    width: calc(100% / 3);
+    width: calc(100% / 6);
 }
 .player{
-    width: calc((100% / 3) * 2);
+    width: calc((100% / 6) * 4);
     height: 100%;
+    padding: 0 10rem;
 }
 .song{
     align-items: center;
@@ -317,13 +318,12 @@ footer{
 }
 /* Player */
 .player-control-buttons{
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 20px;
     height: 50%;
 }
 .player-control-buttons *{
-    padding: 0 20px;
     padding-top: 5px;
 }
 #play{
@@ -357,6 +357,38 @@ footer{
 .time-total{
     font-size: 13px;
 }
+/* Volume */
+.audio-control{
+    /* justify-content:flex-end;
+    gap: 15px; */
+    text-align: end;
+}
+.volume-bar{
+    width: 50%;
+    position: relative;
+}
+.volume-bar div{
+    height: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+.volume-bar .total-volume{
+    width: 100%;
+    background-color: #5a5a5a;
+}
+.volume-bar .now-volume{
+    width: 20%;
+    background-color: white;
+}
+.audio-control{
+    justify-content: space-between;
+}
+.audio-control-icons{
+    gap: 15px;
+}
+
 
 /* MediaQuery */
 /* Medium */
@@ -373,6 +405,19 @@ footer{
     .popular-artists li{
         width: calc(100% / 4);
     }
+    /* Footer - player */
+    .song-details,
+    .audio-control{
+        width: calc(100% / 4);
+    }
+    .song-icons{
+        padding-left: 20px;
+    }
+    .player{
+        width: calc((100% / 4) * 2);
+        padding: 0 4rem;
+    }
+
 }
 /* Small */
 @media screen and (max-width: 700px) {
@@ -388,11 +433,26 @@ footer{
     .popular-artists li{
         width: calc(100% / 2);
     } 
-    /* Footer */
+    /* Footer - player */
     .song-icons{
         flex-wrap: wrap;
         padding-left: 0;
-    }    
+    }   
+    .song-details{
+        width: calc(100% / 3);
+    }
+    .audio-control{
+        width: calc(100% / 3);
+        padding-left: 5px;
+    }
+    .player{
+        width: calc(100% / 3) ;
+        padding: 0;
+    } 
+    .player-control-buttons *{
+        padding: 0 10px;
+        padding-top: 5px;
+    }
 }
 /* ExtraSmall */
 @media screen and (max-width: 600px){
@@ -443,4 +503,22 @@ footer{
         width: calc(100% - 50px);
     }
     /* Footer */
+    .footer-layout{
+        padding: 0 10px;
+    }
+    .footer-layout *
+    {
+        font-size: 12px;
+    }
+    #play{
+        font-size: 16px;
+    }
+    .audio-control-icons{
+        gap: 10px;
+    }
+    .audio-control{
+        justify-content: space-between;
+        padding-left: 5px;
+    }
+
 }
