@@ -39,7 +39,7 @@ a{
 main{
     display: flex;
     background-color: lightgray;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
 }
 /* Upgrade */
 .upgrade{
@@ -270,12 +270,50 @@ nav li:hover{
 }
 /* Footer */
 footer{
-    height: 80px;
-    /* TEST */
-    background-color: lightcoral;
+    height: 100px;
+    background-color: #282828;
+    color: white;
 }
-
-
+.footer-layout{
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.song-details,
+.audio-control{
+    width: calc(100% / 3);
+    background-color: pink;
+}
+.player{
+    width: calc((100% / 3) * 2);
+    background-color: lightblue;
+}
+.song{
+    align-items: center;
+}
+.song-img{
+    width: 50px;
+}
+.song-text{
+    padding-left: 20px;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+}
+.song-name{
+    font-weight: bold;
+}
+.song-artist{
+    color: #7f7f7f;
+}
+.song-icons{
+    color: #7f7f7f;
+    padding-left: 40px;
+}
+.song-icons i{
+    padding: 0 5px;
+}
 
 
 
