@@ -19,9 +19,12 @@
         <main>
             <!-- Sidebar -->
             <div class="sidebar-layout">
-                <div class="sidebar-content">
-                    <!-- logo & first elements -->
+                <div class="sidebar-content flex">
+                    <!-- logo -->
                     <img src="./img/logo.svg" alt="logo" class="logo">
+                    <!-- for xs layout -->
+                    <img src="./img/logo-small.svg" alt="logo-small" class="xs-logo">
+                    <!-- home, search and library -->
                     <ul>
                         <li id="current-sidebar">  
                             <img src="./img/home.svg" alt="home">                          
@@ -37,20 +40,32 @@
                         </li>
                     </ul>
                     <!-- Playlist  -->
-                    <div class="playlist">
+                    <div class="playlists">
                         <span>PLAYLIST</span>
-                        <div class="create-playlist">                            
+                        <div class="create-playlist">  
+                            <i class="fa-solid fa-plus"></i>                          
                             <span>Crea Playlist</span>
                         </div>
-                        <ul>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
+                        <!-- List of playlists -->
+                        <ul class="playlist-list">
                             <li>Nome Playlist</li>
                             <li>Nome Playlist</li>
                             <li>Nome Playlist</li>
                             <li>Nome Playlist</li>
                         </ul>
+                    </div>
+                    
+                   
+                    <div class="sidebar-footer">
+                        <div class="install-app">
+                            <img src="./img/download.svg" alt="download">
+                            <span>Installa app</span>
+                        </div>
+                        <hr>
+                        <div class="account">
+                            <img src="./img/profile.svg" alt="profile">
+                            <span>John Doe</span>
+                        </div>
                     </div>
 
                 </div>

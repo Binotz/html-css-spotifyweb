@@ -48,21 +48,30 @@ main{
     right: 0;
     padding: 2rem;
     background-color: rgba(0,0,0,0.4);
-    width: calc(100% - 200px);
+    width: calc(100% - 300px);
     text-align: right;
 }
 /* Sidebar */
 .sidebar-layout{
-    width: 200px;
+    width: 300px;
     overflow-y: hidden;
 }
 .sidebar-content{
     width: 100%;
+    height: 100%;
+    font-size: 14px;
     background-color: black;
-    color: var(--grey-text);    
+    color: var(--grey-text);   
+    flex-direction: column; 
 }
 .sidebar-content a{
     color: var(--grey-text);
+}
+.sidebar-content .logo{
+    width: 80%;
+}
+.sidebar-content .xs-logo{
+    display: none;
 }
 .sidebar-content li{
     padding: 0.7rem calc(1rem + 4px);
@@ -73,11 +82,42 @@ main{
 .sidebar-content li *{
     vertical-align: middle;
 }
+.sidebar-content ul{
+    padding-bottom: 1rem;
+}
 .sidebar-layout .logo{
     padding: 1rem 1rem;
 }
-
-/* TEST, diventerà current-sidebar */
+/* Playlist */
+.playlists{
+    flex-grow: 1;
+}
+.playlists>span{
+    padding-left: calc(1rem + 4px);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.create-playlist{
+    padding-left: calc(1rem + 4px);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.create-playlist i{
+    padding: 8px;
+    background-color: #a3a3a3;
+    font-size: 20px;
+    color: black;
+}
+.create-playlist>span{
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.playlist-list{
+    height: 50%;
+    overflow-y: auto;
+}
 .sidebar-content #current-sidebar{
     border-left: 4px solid #a3f12c;
     padding-left: 1rem ;
@@ -86,9 +126,42 @@ main{
 #current-sidebar a{
     color: white;
 }
+/* Account & download */
+.sidebar-footer{
+    padding: 20px calc(1rem + 4px);
+}
+.sidebar-footer img{
+    width: 20px;
+}
+.install-app{
+    padding-bottom: 1rem;
+}
+.install-app *{
+    vertical-align: middle;
+}
+.install-app span{
+    padding-left: 10px;
+    font-weight: bold;
+}
+.account{
+    padding-top: 1rem;
+}
+.account>*{
+    vertical-align: middle;
+}
+.account img{
+    width: 25px;
+    background-color: #808080;
+    border-radius: 50%;
+}
+.account span{
+    padding-left: 12px;
+    font-weight: bold;
+    color: white;
+}
 /* Music */
 .music-layout{
-    width: calc(100% - 200px);
+    width: calc(100% - 300px);
     padding: 1rem;
     padding-top: 6rem;
     overflow-y: auto;
@@ -239,9 +312,51 @@ footer{
 }
 /* ExtraSmall */
 @media screen and (max-width: 600px){
+    /* Sidebar */
     .sidebar-layout{
         width: 50px;
     }
+
+    .sidebar-content .logo{
+        display: none;
+    }
+    .sidebar-content .xs-logo{
+        display: inline-block;
+        padding: 5px;
+    }
+    .sidebar-content a{
+        display: none;
+    }
+    .sidebar-content #current-sidebar{
+        border-left-width: 0px;
+        padding-left: 0;
+    }
+    .sidebar-content ul{
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-grow: 1;
+    }
+    .sidebar-content li {
+        padding: 5px 0;
+    }
+    /* Playlist */
+    .playlists{
+        display: none;
+    }
+    /* Account */
+    .sidebar-footer{
+        align-self: center;
+        padding: 20px 0;
+    }
+    hr{
+        display: none;
+    }
+    .sidebar-footer span{
+        display: none;
+    }
+    /* Footer */
+
+    /* Music */
     .music-layout{
         width: calc(100% - 50px);
     }
