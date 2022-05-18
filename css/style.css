@@ -30,13 +30,11 @@ a{
     border: 1px solid white;
     border-radius: 25px;
     text-decoration: none;
-    /* transition: all 1s; */
     display: inline-block;
 }
 .btn:hover{
     transform: scale(1.05);
 }
-
 /* Main */
 main{
     display: flex;
@@ -355,6 +353,7 @@ footer{
 }
 .song-artist{
     color: #7f7f7f;
+    white-space: nowrap;
 }
 /* Hover effect */
 .song-artist:hover{
@@ -417,7 +416,7 @@ footer{
     display: none;
     position: absolute;
     top: 0px;
-    left: calc(20% - 4px);
+    left: calc(20% - 6px);
 }
 /* Hover */
 .played:hover .played-time{
@@ -431,7 +430,6 @@ footer{
     font-size: 13px;
 }
 /* Volume */
-
 .volume-bar{
     width: 50%;
     position: relative;
@@ -467,10 +465,10 @@ footer{
     width: 100%;
 }
 /* Hover */
-.volume:hover .now-volume{
+.volume-bar:hover .now-volume{
     background-color: #a3f12c;
 }
-.volume:hover i{
+.volume-bar:hover i{
     display: inline-block;
 }
 .audio-control{
@@ -537,6 +535,9 @@ footer{
     }   
     .song-details{
         width: calc(100% / 3);
+    }
+    .song-artist{
+        white-space: normal;
     }
     .audio-control{
         width: calc(100% / 3);
